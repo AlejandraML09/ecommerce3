@@ -1,0 +1,150 @@
+[
+ {
+"nombre": "Logitech Series G Prodigy G213",
+"precio": "7028",
+"stock": "5",
+"marca": "Logitech",
+"categoria": "teclados",
+"foto": "https://mla-s1-p.mlstatic.com/803586-MLA32722349249_102019-F.jpg",
+"detalles": "Teclado Gamer Logitech Serie G Prodigy G213 QWERTY",
+"envio": true
+ },
+ {
+"nombre": "HyperX Alloy Core",
+"precio": "13712",
+"stock": "6",
+"marca": "HyperX",
+"categoria": "teclados",
+"foto": "https://media.kingston.com/hyperx/product/hx-product-keyboard-alloy-core-rgb-hxkb5me2br-1-zm-lg.jpg",
+"detalles": "Teclado gamer HyperX Alloy Core RGB QWERTY.Lenguaje español latinoamérica.Color negro con luz RGB",
+"envio": true
+ },
+ {
+"nombre": "Razer Huntsman Tournament Edition",
+"precio": "16000",
+"stock": "5",
+"marca": "Razer",
+"categoria": "teclados",
+"foto": "https://images-na.ssl-images-amazon.com/images/I/41mT0jaFm6L._SX500_SY500_CR,0,0,500,500_.jpg",
+"detalles": "Teclado Gamer Razer Huntsman Tournament Edition Qwerty Linear Optical. Lenguaje Inglés US. Color Negro con Luz Rgb",
+"envio": true
+ },
+ {
+"nombre": "Redragon Magic Wand Pro",
+"precio": "8499",
+"stock": "4",
+"marca": "Redragon",
+"categoria": "teclados",
+"foto": "https://www.precio-calidad.com.ar/wp-content/uploads/2021/02/K587-MAGIC-WAND-US-8.jpg",
+"detalles": "Teclado Gamer Redragon Magic Wand Pro K587 - PRO QWERTY Redragon Opto - Mecánico.Lenguaje español latinoamérica.Color negro con luz RGB",
+"envio": true
+ },
+ {
+"nombre": "Razer Seiren Mini",
+"precio": "8899",
+"stock": "5",
+"marca": "Razer",
+"categoria": "microfono",
+"foto": "https://d2ye0ltusw47tz.cloudfront.net/7810801-thickbox_default/microfono-razer-seiren-mini-ultra-quartz.jpg",
+"detalles": "Microfóno Razer Seiren Mini condensador supercardioide rosa cuarzo.",
+"envio": true
+ },
+ {
+"nombre": "HyperX QuadCast",
+"precio": "13450",
+"stock": "8",
+"marca": "HyperX",
+"categoria": "microfono",
+"foto": "https://media.kingston.com/hyperx/product/hx-product-quadcast-s-2-zm-lg.jpg",
+"detalles": "Micrófono HyperX QuadCast condensador multipatrón negro",
+"envio": true
+ },
+ {
+"nombre": "Blue Yeti X Profesional",
+"precio": "15530",
+"stock": "8",
+"marca": "Blue",
+"categoria": "microfono",
+"foto": "https://logitechar.vteximg.com.br/arquivos/ids/157467-1000-1000/Yeti-X-Dark-Grey-Front.png?v=637321592708900000",
+"detalles": "\"Blue Yeti X, micrófono condensador USB profesional con indicadores de alta resolución, iluminación LED y efectos Blue VOICE para gaming, streaming y podcasting en PC / Mac",
+"envio": true
+ },
+ {
+"nombre": "Blue Snowball Ice",
+"precio": "7499",
+"stock": "3",
+"marca": "Blue",
+"categoria": "microfono",
+"foto": "https://s3-sa-east-1.amazonaws.com/saasargentina/jQTTj2Sawbs2Gh7TRKRv/imagen",
+"detalles": "Recomendado para computadora, grabaciones, streaming,instrumentos, voces, podcast. Formato: de mesa. Conectores de salida: usb.",
+"envio": false
+ },
+ {
+"nombre": "HyperX Cloud II",
+"precio": "16065",
+"stock": "6",
+"marca": "HyperX",
+"categoria": "headsets",
+"foto": "https://ripleycl.imgix.net/https%3A%2F%2Fs3-sa-east-1.amazonaws.com%2Fcentryproduction%2Fbelanit-inventario%2Fproducts%2F5d6ddc4d0038e85f53d8ae52%2Fimage%2F5d6ddc4d0038e85f53d8ae52%2Foriginal%2Fopen-uri20190802-7734-1xsba6y.?w=750&h=555&ch=Width&auto=format&cs=strip&bg=FFFFFF&q=60&trimcolor=FFFFFF&trim=color&fit=fillmax&ixlib=js-1.1.0&s=531fc3127cb907e3d5fd93e7edad38ba",
+"detalles": "Compatible con PS4 y Xbox One. Micrófono flexible incorporado. Tipo de conector: Jack 3.5 mm",
+"envio": false
+ },
+ {
+"nombre": "Logitech Series G733",
+"precio": "18600",
+"stock": "3",
+"marca": "Logitech",
+"categoria": "headsets",
+"foto": "https://resource.logitechg.com/w_1000,c_limit,q_auto,f_auto,dpr_auto/d_transparent.gif/content/dam/gaming/en/products/g733/gallery/g733-lilac-gallery-1.png?v=1",
+"detalles": "Compatible con PS4. Alcance inalámbrico de 20 m.La batería dura 29 h.Con micrófono incorporado.Sonido superior y sin límites",
+"envio": true
+ },
+ {
+"nombre": "Razer Kraken",
+"precio": "16000",
+"stock": "6",
+"marca": "Razer",
+"categoria": "headsets",
+"foto": "https://img.gkbcdn.com/p/2017-10-26/razer-kraken-pro-v2-gaming-headset-with-mic-oval-ear-cushion-green-1571973770993._w500_.jpg",
+"detalles": "Motor avanzado de sonido envolvente virtual 7.1 Micrófono digital de alta calidad. Diseñado para una mayor comodidad durante el juego.",
+"envio": false
+ },
+ {
+nombre": "Redragon Zeus black",
+"precio": "7409",
+"stock": "9",
+"marca": "Redragon",
+"categoria": "headsets",
+"foto": "https://redragon.es/content/uploads/2021/09/ZEUS-X.png",
+"detalles": "Compatible con PS4, Xbox One y Nintendo Switch y PS3.Con micrófono incorporado.Tipo de conector: Jack 3.5 mm / USB. Sonido superior y sin límites",
+"envio": false
+ },
+ {
+"nombre": "Bose QuietComfort 35 ",
+"precio": "49999",
+"stock": "7",
+"marca": "Bose",
+"categoria": "headsets",
+"foto": "https://m.media-amazon.com/images/I/611CN975jSL._AC_SY355_.jpg",
+"detalles": "La batería dura 20 h. Modo manos libres incluido. Asistentes de voz integrados: Google Assistant y Alexa. Con cancelación de ruido. Con micrófono incorporado.",
+"envio": true
+ },
+ {
+"nombre": "Corsair Virtuoso",
+"precio": "29999",
+"stock": "6",
+"marca": "Corsair",
+"categoria": "headsets",
+"foto": "https://www.corsair.com/medias/sys_master/images/images/h04/ha8/9312777699358/-CA-9011186-NA-Gallery-VIRTUOSO-WHITE-01.png",
+"detalles": "Los CORSAIR VIRTUOSO RGB Wireless ofrecen una experiencia de sonido de alta fidelidad y una comodidad continua gracias a las orejeras de espuma con memoria premium y una conectividad hiperrápida con tecnología SLIPSTREAM WIRELESS.",
+"envio": true
+ },
+ {
+"nombre": "Sony PlayStation Gold",
+"precio": "78896",
+"stock": "6",
+"marca": "Sony",
+"categoria": "headsets",
+"foto": "https://www.casmovil.es/wp-content/uploads/2020/03/9969600-0.jpg",
+"detalles": "Modo manos libres incluido. Con cancelación de ruido. Con micrófono incorporado. Tipo de conector: Jack 3.5 mm.",
+"envio": true

@@ -1,0 +1,155 @@
+.card {
+    outline: none;
+    flex-grow: 1;
+    width: $card-width;
+    max-width: 300px;
+    height: $card-height;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, -2), 0 0 3px rgba(0, 0, 0, -4);
+    border-radius: 5px 5px 0 0;
+
+    /* This container is needed to position the front and back side */
+    &__content {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+    }
+    /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+    &__flip {
+        background-color: transparent;
+        width: $card-width;
+        height: $card-height;
+        perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    }
+    /* Do an horizontal flip when you move the mouse over the flip box container */
+    // &__flip:hover &__content {
+    //     transform: rotateY(180deg);
+    // }
+    /* Position the front and back side */
+    &__heading,
+    &__description {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden; /* Safari */
+        backface-visibility: hidden;
+    }
+    /* Style the front side (fallback if image is missing) */
+    &__heading {
+        color: black;
+        overflow: hidden;
+        height: $card-height;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 5px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: white;
+
+        h2 {
+            padding: 0.5em;
+        }
+        // h3 {
+        //     align-self: center;
+        //     background-color: $highlight-color;
+        //     width: 100%;
+        //     padding: 0.5em;
+        //     color: $light-text-color;
+        //     margin-bottom: 1em;
+        // }
+    }
+    /* Style the back side */
+    &__description {
+        padding: 1em;
+        background-color: $nav-bar-color;
+        color: white;
+        transform: rotateY(180deg);
+        height: $card-height;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+    }
+    &--flipped {
+        transform: rotateY(180deg);
+    }
+}
+
+.card__image {
+    display: none;
+}
+
+/* Para los títulos H1 */
+.card-category-container {
+    > h2 {
+        border-bottom: 2px $secondary-text-color solid;
+        text-align: center;
+        margin-top: 0.5em;
+        font-size: 2em;
+    }
+}
+
+// El carrito dentro de la card
+.cart-button {
+    outline: none;
+    background: transparent;
+    border: 1px solid transparent;
+    align-self: center;
+    background-color: $highlight-color;
+    width: 100%;
+    padding: 8px;
+    color: $light-text-color;
+    margin-bottom: 1.2em;
+    font-family: "Montserrat", sans-serif;
+    font-size: medium;
+
+    &:hover {
+        transition: all 0.2s ease-in-out;
+        transform: scale(1.3);
+        cursor: pointer;
+    }
+
+    .fa-cart-plus {
+        font-size: 1.1em;
+        margin-left: 0.5em;
+        color: $light-text-color;
+    }
+}
+
+// Las flechas para dar vuelta la card
+.fa-angle-double-right {
+    font-size: 3em;
+    display: flex;
+    align-self: flex-end;
+    justify-items: center;
+    color: $highlight-color;
+    margin-right: 3px;
+
+    &:hover {
+        transition: all 0.2s ease-in-out;
+        transform: scale(1.3);
+        color: $highlight-color-hover;
+    }
+}
+
+#arrow-button-right {
+    display: flex;
+    align-self: flex-end;
+    justify-items: center;
+    outline: none;
+    background: transparent;
+    border: 1px solid transparent;
+}
+
+#arrow-button-left {
+    display: flex;
+    align-self: center;
+    justify-items: center;
+    outline: none;
+    background: transparent;
+    border: 1px solid transparent;
+}

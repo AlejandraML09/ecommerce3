@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Connecticus</title>
+        <link
+            rel="shortcut icon"
+            type="image/x-icon"
+            href="imagenes/logo_solo.png"
+        />
+        <link rel="stylesheet" href="css/main.css" />
+        <script
+            src="https://kit.fontawesome.com/843822ef05.js"
+            crossorigin="anonymous"
+        ></script>
+    </head>
+    <body>
+        <div class="section-carrito sidebar" id="mySidebar"></div>
+        <header class="main-header">
+            <input type="checkbox" id="menu" />
+            <nav class="nav-bar">
+                <ul class="nav-bar__nav-list">
+                    <li class="nav-bar__nav-item">
+                        <a class="nav-bar__nav-link" href="" id="inicio"
+                            >Inicio</a
+                        >
+                    </li>
+                    <li class="nav-bar__nav-item">
+                        <a class="nav-bar__nav-link" href="" id="alta">Alta</a>
+                    </li>
+                    <li class="nav-bar__nav-item">
+                        <a class="nav-bar__nav-link" href="" id="contacto"
+                            >Contacto</a
+                        >
+                    </li>
+                    <li class="nav-bar__nav-item">
+                        <a class="nav-bar__nav-link" href="" id="nosotros"
+                            >Nosotros</a
+                        >
+                    </li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <a class="search-bar__logo-container" href="index.html"></a>
+                <form class="search-bar__form-container">
+                    <label
+                        class="search-bar__form-label"
+                        for="busqueda"
+                    ></label>
+                    <input
+                        class="search-bar__form-search"
+                        id="busqueda"
+                        type="search"
+                        placeholder="Buscar"
+                    />
+                    <a href="#" class="search-bar__form-submit">
+                        <i class="fas fa-search"> </i>
+                    </a>
+                    <input
+                        class="search-bar__form-submit"
+                        id="search-bar__button"
+                        type="submit"
+                    />
+                </form>
+                <div class="search-bar__carrito-container">
+                    <button class="openbtn notification">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="badge" id="cart-badge"></span>
+                    </button>
+                </div>
+                <div class="menu-toggle">
+                    <label class="menu-toggle__label" for="menu">
+                        <span class="menu-toggle__top-bread"></span>
+                        <span class="menu-toggle__meat"></span>
+                        <span class="menu-toggle__bottom-bread"></span>
+                    </label>
+                </div>
+            </div>
+        </header>
+
+        <!-- ---------------------------Zona de Menú Modal del Carrito -------------------------------------- -->
+        <div id="loader"></div>
+        <main id="main"></main>
+
+        <footer>
+            <div class="footer-lists">
+                <div class="footer-lists__column">
+                    <h1 class="footer-lists__column-title">Support</h1>
+                    <ul class="footer-lists__column-list">
+                        <li class="footer-lists__column-item">
+                            <a class="footer-lists__column-link" href="#"
+                                >Ayuda</a
+                            >
+                        </li>
+                        <li class="footer-lists__column-item">
+                            <a class="footer-lists__column-link" href="#"
+                                >Registración</a
+                            >
+                        </li>
+                        <li class="footer-lists__column-item">
+                            <a class="footer-lists__column-link" href="#"
+                                >Garantía</a
+                            >
+                        </li>
+                        <li class="footer-lists__column-item">
+                            <a class="footer-lists__column-link" href="#"
+                                >Descuentos Exclusivos</a
+                            >
+                        </li>
+                        <li class="footer-lists__column-item">
+                            <a class="footer-lists__support-link" href="#"
+                                >Newsletter</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-lists__column">
+                    <h1 class="footer-lists__column-title">Explorar</h1>
+                    <ul class="footer-lists__column-list">
+                        <li class="footer-lists__column-item">
+                            <a class="footer-lists__column-link" href="#"
+                                >Tecnología</a
+                            >
+                        </li>
+                        <li class="footer-lists__column-item">
+                            <a class="footer-lists__column-link" href="#"
+                                >Chroma RGB</a
+                            >
+                        </li>
+                        <li class="footer-lists__column-item">
+                            <a class="footer-lists__column-link" href="#"
+                                >Esports</a
+                            >
+                        </li>
+                        <li class="footer-lists__column-item">
+                            <a class="footer-lists__column-link" href="#"
+                                >Colaboraciones</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-lists__column">
+                    <h1 class="footer-lists__column-title">Cyber Monday</h1>
+                    <ul class="footer-lists__column-list">
+                        <li class="footer-lists__column-item">
+                            <a class="footer-lists__column-link" href="#"
+                                >Bases y Condiciones</a
+                            >
+                        </li>
+                        <li class="footer-lists__column-item">
+                            <a class="footer-lists__column-link" href="#"
+                                >Preguntas Frecuentes</a
+                            >
+                        </li>
+                        <li class="footer-lists__column-item">
+                            <a class="footer-lists__column-link" href="#"
+                                >Política de cambios y devoluciones</a
+                            >
+                        </li>
+                        <li class="footer-lists__column-item">
+                            <a class="footer-lists__column-link" href="#"
+                                >Soporte Técnico</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-lists__social-media">
+                    <i class="fab fa-whatsapp"></i>
+
+                    <i class="fab fa-twitter"></i>
+
+                    <i class="fab fa-facebook"></i>
+
+                    <i class="fab fa-instagram"></i>
+                </div>
+            </div>
+
+            <div class="footer-copyright">
+                <p>Copyright © 2021 Connecticus Inc. All rights reserved.</p>
+            </div>
+        </footer>
+
+        <!-- ----------------------------------------------------------------- -->
+        <!--                        ZONA DE SCRIPTS                            -->
+        <!-- ----------------------------------------------------------------- -->
+
+        <!-- librerías -->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"
+            integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+
+        <!-- scripts auxiliares - Modificación 18/01/2022 -->
+        <!-- <script src="js/menu/cards.js"></script> -->
+
+        <!-- clientes -->
+        <script src="js/clientes/http.js"></script>
+
+        <!-- servicios -->
+        <script src="js/servicios/productos.js"></script>
+        <script src="js/servicios/carrito.js"></script>
+
+        <!-- modelos -->
+        <script src="js/modelos/productos.js"></script>
+        <script src="js/modelos/carrito.js"></script>
+
+        <!-- controladores -->
+        <script src="js/controladores/productos.js"></script>
+        <script src="js/controladores/carrito.js"></script>
+
+        <!-- scripts de plantillas -->
+        <script src="js/menu/inicio.js"></script>
+        <script src="js/menu/alta.js"></script>
+        <script src="js/menu/contacto.js"></script>
+        <script src="js/menu/nosotros.js"></script>
+        <script src="js/menu/carrito.js"></script>
+
+        <!-- script de arranque -->
+        <script src="js/main.js"></script>
+    </body>
+</html>

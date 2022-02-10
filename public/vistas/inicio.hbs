@@ -1,0 +1,48 @@
+{{#if productos.length}}
+    {{#each productos}}
+        <div class="card" id="card-'{{id}}'">
+            <article class="card__article">
+                <div class="card__flip">
+                    <div class="card__content">
+                        <div
+                            class="card__heading"
+                            style="background-image:url('{{foto}}')"
+                        >
+                            <h2>
+                                {{nombre}}
+                            </h2>
+                            <button
+                                id="arrow-button-right"
+                                onclick="toggleCard('{{id}}'')"
+                            ><i class="fas fa-angle-double-right"></i></button>
+                            <button
+                                class="cart-button"
+                                onclick="agregarAlCarrito('{{id}}')"
+                            ><h3>${{precio}}<i
+                                        class="fas fa-cart-plus"
+                                    ></i></h3></button>
+                        </div>
+                        <div class="card__description">
+                            <p>
+                                {{detalles}}
+                            </p>
+                            <button
+                                id="arrow-button-left"
+                                onclick="toggleCard('{{id}}')"
+                            >
+                                <i
+                                    class="fas fa-angle-double-right"
+                                ></i></button>
+
+                        </div>
+
+                    </div>
+                </div>
+            </article>
+        </div>
+    {{/each}}
+{{else}}
+    <h2>No se encontraron productos.</h2>
+{{/if}}
+
+{{! Esto es un ciclo iterativo en la lista, en dónde por cada uno pongo una card. Nosotros por cada producto tenemos el Nombre, los Detalles y la Foto (en Alta en el cuadrado. Le podemos agregar los que queramos) }}

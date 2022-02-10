@@ -1,0 +1,122 @@
+.section-carrito {
+    user-select: none;
+    overflow-y: auto;
+    position: fixed;
+    background-color: $nav-bar-color;
+    z-index: 1;
+    top: 150px;
+    left: 150px;
+    right: 150px;
+    bottom: 150px;
+    box-shadow: 0px 25px 40px #1687d933;
+    display: flex;
+    flex-direction: column;
+
+    .cart-item {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin-bottom: 0.5em;
+        padding-right: 0.5em;
+
+        &-description {
+            padding: 1em;
+
+            button {
+                outline: none;
+                background: transparent;
+                border: 1px solid transparent;
+            }
+        }
+
+        .cart-image-container {
+            width: 33%;
+            background-color: $light-text-color;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            border-radius: 3px;
+
+            &__image {
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+.fa-trash-alt {
+    color: $highlight-color;
+    margin-top: 0.5em;
+    font-size: 1.5em;
+}
+
+.btn__enviarCarrito {
+    background-color: $highlight-color;
+    border: none;
+    padding: 1em;
+    color: $light-text-color;
+    font-family: inherit;
+    font-size: inherit;
+    border-radius: 0.3em;
+    margin: 0.5em;
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: $nav-bar-color;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: $nav-bar-color;
+    color: $light-text-color;
+    padding: 10px 15px;
+    border: none;
+}
+
+.openbtn:hover {
+    background-color: #444;
+}
+
+#main {
+    transition: margin-left 0.5s;
+}
+
+.notification .badge {
+    position: absolute;
+    top: 20px;
+    right: 0.7em;
+    transform: scale(0.6);
+    padding: 5px 10px;
+    border-radius: 50%;
+    background: $alert-color;
+    color: $light-text-color;
+    font-weight: bold;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidebar {
+        padding-top: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .notification .badge {
+        position: absolute;
+        transform: scale(0.6);
+        padding: 5px 10px;
+        border-radius: 50%;
+        right: 3em;
+        top: -3px;
+    }
+}

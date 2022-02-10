@@ -1,0 +1,59 @@
+footer {
+    background-color: $nav-bar-color;
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+
+    li {
+        list-style: none;
+        margin-top: 0.5em;
+    }
+    &:visited {
+        color: $background-color;
+    }
+    a {
+        text-decoration: none;
+        color: $light-text-color;
+    }
+}
+
+/* Contiene dentro de un div a todo el footer */
+.footer-lists {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* Las columnas del footer para que aparezcan una al lado del otra, separadas */
+    &__column {
+        display: flex;
+        flex-direction: column;
+    }
+    &__column-title {
+        color: $highlight-color;
+        font-size: larger;
+    }
+    &__column-list {
+        margin-bottom: 2em;
+    }
+    /* Los iconos del Footer */
+    &__social-media {
+        display: flex;
+        flex-direction: row;
+        .fab {
+            color: $highlight-color;
+            font-size: 2em;
+            margin-left: 1em;
+            &:hover {
+                color: $light-text-color;
+            }
+        }
+    }
+}
+
+/* El Copyright */
+.footer-copyright {
+    margin-top: 2em;
+    border-top: 2px $background-color solid;
+    padding-top: 0.5em;
+}

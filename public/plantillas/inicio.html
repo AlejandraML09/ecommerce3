@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Inicio</title>
+    </head>
+    <body></body>
+</html>
+
+<main>
+    <!-- DISCOUNTS -->
+    <div class="hero-banner"></div>
+    <section class="section-cards">
+        <header class="section-cards__header">
+            <h2 class="section-cards__title">
+                ELIGE, PAGA Y RECIBE TU PEDIDO SIN MOVERTE DE TU CASA.
+            </h2>
+        </header>
+
+        <!-- BANNERS -> -->
+        <div class="banner">
+            <button
+                class="banner__container"
+                id="pepe"
+                onclick="scrollToElement('headsets__container')"
+            >
+                <h2 class="banner__title">Headsets</h2>
+            </button>
+
+            <button
+                class="banner__container"
+                onclick="scrollToElement('keyboard-container')"
+            >
+                <h2 class="banner__title">Teclados</h2>
+            </button>
+
+            <button
+                class="banner__container"
+                onclick="scrollToElement('microphones__container')"
+            >
+                <h2 class="banner__title">Microfonos</h2>
+            </button>
+        </div>
+        <!-- CARDS  -->
+        <div class="card-category-container">
+            <h1></h1>
+            <h2>Teclados</h2>
+            <div class="cards-container" id="keyboard-container"></div>
+            <h2>Microfonos</h2>
+            <div class="cards-container" id="microphones__container"></div>
+            <h2>Headsets</h2>
+            <div class="cards-container" id="headsets__container"></div>
+        </div>
+    </section>
+</main>

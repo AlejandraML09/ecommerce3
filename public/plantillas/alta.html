@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Alta</title>
+        <link rel="stylesheet" href="css/main.css" />
+        <link
+            rel="shortcut icon"
+            type="image/x-icon"
+            href="imagenes/logo_solo.png"
+        />
+        <script
+            src="https://kit.fontawesome.com/843822ef05.js"
+            crossorigin="anonymous"
+        ></script>
+    </head>
+    <body>
+        <main>
+            <!-- FORMULARIOS -->
+            <h1 class="form-title">Alta de Productos</h1>
+            <form action="#" autocomplete="off" class="form">
+                <div class="form__container">
+                    <label for="name">Nombre del Producto:*</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        required
+                        placeholder="Nombre"
+                    />
+                    <div class="form-error"></div>
+                </div>
+                <div class="form__container">
+                    <label for="price">Precio:*</label>
+                    <input
+                        type="number"
+                        id="price"
+                        name="price"
+                        required
+                        placeholder="Precio"
+                    />
+                    <div class="form-error"></div>
+                </div>
+                <div class="form__container">
+                    <label for="stock">Stock:</label>
+                    <input type="number" id="stock" name="stock" required />
+                    <div class="form-error"></div>
+                </div>
+
+                <div class="form__container">
+                    <label for="name">Marca:*</label>
+                    <input
+                        type="text"
+                        id="brand"
+                        name="brand"
+                        required
+                        placeholder="Marca"
+                    />
+                    <div class="form-error"></div>
+                </div>
+
+                <div class="form__container" id="#id-container">
+                    <label for="category">Categoría:</label>
+                    <select id="category" name="category" size="4">
+                        <optgroup label="Elegí Categoría:">
+                            <option value="teclados">Teclado</option>
+                            <option value="headsets">Headsets</option>
+                            <option value="microfono">Microfono</option>
+                        </optgroup>
+                    </select>
+                </div>
+
+                <div class="form__container">
+                    <label for="photo">Foto del Producto:* </label>
+                </div>
+                <div id="drop-area">
+                    <div class="drop-area__container">
+                        <p class="drop-area--title">
+                            Arrastra o clickea en el botón para subir tu imagen!
+                        </p>
+                        <input
+                            type="file"
+                            id="foto"
+                            accept="imagen/*"
+                            onchange="handleFiles(this.files)"
+                        />
+                        <label for="foto" class="button"><i class="fas fa-solid fa-upload"></i></label>
+
+                        <progress
+                            id="progress-bar"
+                            max="100"
+                            value="0"
+                        ></progress>
+                        <div id="gallery"><img src="" alt="" /></div>
+                    </div>
+                </div>
+
+                <div class="form__container">
+                    <label for="details">Detalles:</label>
+                    <input name="details" id="details" cols="30" rows="5" />
+                    <div class="form-error"></div>
+                </div>
+
+                <div class="form__container form__container--row">
+                    <label class="free-shipping">Envio sin cargo:</label>
+                    <input
+                        type="checkbox"
+                        id="shipping"
+                        name="shipping"
+                        value="shipping"
+                    />
+                </div>
+
+                <button>Enviar</button>
+            </form>
+            <video
+                class="form__background-video"
+                autoplay
+                muted
+                loop
+                id="myVideo"
+                playsinline
+            >
+                <source src="imagenes/RazerBasiliskV3.mp4" type="video/mp4" />
+            </video>
+
+            <div class="available-products">
+                <h2>Productos Disponibles:</h2>
+                <button onclick="menuProductos()">
+                    Haga click aquí para mostrar los productos disponibles
+                </button>
+                <div class="listado-productos"></div>
+            </div>
+        </main>
+    </body>
+</html>

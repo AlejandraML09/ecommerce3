@@ -1,0 +1,51 @@
+{{#if productos.length}}
+    <ul class="responsive-table">
+        <li class="table-header">
+            {{!-- <div class="col col-1">ID:</div> --}}
+            <div class="col col-3">Nombre del Producto:</div>
+            <div class="col col-1">Precio:</div>
+            <div class="col col-1">Stock:</div>
+            <div class="col col-1">Marca:</div>
+            <div class="col col-1">Categoria:</div>
+            <div class="col col-3">Detalles:</div>
+            <div class="col col-1">Foto:</div>
+            <div class="col col-1">Envío:</div>
+            <div class="col col-1">Acción:</div>
+        </li>
+
+        {{#each productos}}
+            <li class="table-row">
+                {{!-- <div class="col col-1" data-label="ID:">{{id}}</div> --}}
+                <div class="col col-3" data-label="Nombre:">{{nombre}}</div>
+                <div class="col col-1" data-label="Precio:">{{precio}}</div>
+                <div class="col col-1" data-label="Stock:">{{stock}}</div>
+                <div class="col col-1" data-label="Marca:">{{marca}}</div>
+                <div
+                    class="col col-1"
+                    data-label="Categoria:"
+                >{{categoria}}</div>
+                <div class="col col-3" data-label="Detalle:">{{detalles}}</div>
+                <div class="col col-1" data-label="Foto:">
+                    <img src="{{foto}}" width="50" alt="{{nombre}}" />
+                </div>
+                <div class="col col-1" data-label="Envío:">
+                    {{#if envio}}
+                        <div><i class="far fa-check-circle"></i></div>
+                    {{else}}
+                        <div><i class="far fa-times-circle"></i></div>
+                    {{/if}}
+                </div>
+                <div class="col col-1" data-label="Acción:">
+                    <button
+                        onclick="productosController.actualizarProducto('{{id}}')"
+                    ><i class="fas fa-edit"></i></button>
+                    <button
+                        onclick="productosController.borrarProducto('{{id}}')"
+                    ><i class="fas fa-trash"></i></button>
+                </div>
+            </li>
+        {{/each}}
+    </ul>
+{{else}}
+    <h3>No se encontraron productos</h3>
+{{/if}}

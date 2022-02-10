@@ -1,0 +1,209 @@
+.about-us-hero {
+    display: flex;
+    box-sizing: border-box;
+    height: 90px;
+    background-color: $highlight-color;
+    clip-path: ellipse(66% 100% at 50.96% 0%);
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+}
+
+/* BANNER */
+.about-us-banner {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding-top: 4.5em;
+}
+
+/* La clase que contiene a TODOS */
+.about-us {
+    p {
+        font-size: 1.4em;
+    }
+    &__title {
+        font-size: 2em;
+    }
+    &__content {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 2em;
+        padding: 2em;
+        flex-wrap: wrap;
+    }
+    &__content-left {
+        display: flex;
+        flex-direction: column;
+        inline-size: 500px;
+        overflow-wrap: break-word;
+        margin-bottom: 4em;
+    }
+    &__content-right {
+        display: flex;
+        flex-direction: column;
+
+        li {
+            list-style: none;
+            margin-top: 0.5em;
+            font-size: 1.4em;
+        }
+
+        li:hover {
+            color: $highlight-color-hover;
+        }
+        .fas {
+            margin-right: 0.5em;
+        }
+
+        .fas:hover {
+            color: $highlight-color-hover;
+        }
+    }
+    /* Encontranos! -> Donde esta el mapa */
+    &__find-us {
+        margin-bottom: 3em;
+        display: flex;
+        padding: 2em;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        inline-size: 500px;
+        overflow-wrap: break-word;
+        margin-bottom: 2em;
+    }
+    /* History Timeline */
+    &__timeline {
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+    /* The actual timeline (the vertical ruler) */
+    &__vertical-ruler {
+        position: relative;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    /* The actual timeline (the vertical ruler) */
+    &__vertical-ruler::after {
+        content: "";
+        position: absolute;
+        width: 6px;
+        background-color: $light-text-color;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        margin-left: -3px;
+    }
+
+    /* Container around content */
+    &__time-line-bubble {
+        padding: 10px 40px;
+        position: relative;
+        background-color: inherit;
+        width: 50%;
+    }
+    /* The circles on the timeline */
+    &__time-line-bubble::after {
+        content: "";
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        right: -17px;
+        background-color: $highlight-color;
+        border: 4px solid $highlight-color;
+        top: 15px;
+        border-radius: 50%;
+        z-index: 1;
+    }
+
+    /* Place the container to the left */
+    &__time-line-bubble-left {
+        left: 0;
+    }
+
+    /* Place the container to the right */
+    &__time-line-bubble-right {
+        left: 50%;
+    }
+    /* Add arrows to the left container (pointing right) */
+    &__time-line-bubble-left::before {
+        content: " ";
+        height: 0;
+        position: absolute;
+        top: 22px;
+        width: 0;
+        z-index: 1;
+        right: 30px;
+        border: medium solid $light-text-color;
+        border-width: 10px 0 10px 10px;
+        border-color: transparent transparent transparent $light-text-color;
+    }
+
+    /* Add arrows to the right container (pointing left) */
+    &__time-line-bubble-right::before {
+        content: " ";
+        height: 0;
+        position: absolute;
+        top: 22px;
+        width: 0;
+        z-index: 1;
+        left: 30px;
+        border: medium solid $light-text-color;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent $light-text-color transparent transparent;
+    }
+
+    /* Fix the circle for containers on the right side */
+    &__time-line-bubble-right::after {
+        left: -16px;
+    }
+
+    /* The actual content */
+    &__time-line-text {
+        padding: 20px 30px;
+        background-color: $light-text-color;
+        position: relative;
+        border-radius: 6px;
+        color: $background-color;
+    }
+
+    @media screen and (max-width: 600px) {
+        /* Place the timelime to the left */
+        &__vertical-ruler::after {
+            left: 31px;
+        }
+
+        /* Full-width containers */
+        &__time-line-bubble {
+            width: 100%;
+            padding-left: 70px;
+            padding-right: 25px;
+        }
+
+        /* Make sure that all arrows are pointing leftwards */
+        &__time-line-bubble::before {
+            left: 60px;
+            border: medium solid white;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent white transparent transparent;
+        }
+
+        /* Make sure all circles are at the same spot */
+        &__time-line-bubble-left::after,
+        &__time-line-bubble-right::after {
+            left: 15px;
+        }
+
+        /* Make all right containers behave like the left ones */
+        &__time-line-bubble-right {
+            left: 0%;
+        }
+    }
+}

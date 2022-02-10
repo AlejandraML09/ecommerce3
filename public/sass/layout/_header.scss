@@ -1,0 +1,230 @@
+/************************
+            HEADER
+***************************/
+
+.main-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: $nav-bar-color;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    overflow: hidden;
+}
+
+#menu {
+    display: none;
+
+    &:checked {
+        + .nav-bar {
+            border-top: 2px solid $background-color;
+            display: block;
+        }
+
+        ~ .search-bar .menu-toggle__label {
+            background-color: dodgerblue;
+        }
+    }
+}
+
+/*****************************************
+     BARRA DE NAVEGACIÓN (NAV-BAR) -> Tiene adentro los UL's que es la LISTA de navegación de la Nav-bar.
+******************************************/
+/* Contiene toda la lista entera -> Contiene el NAV */
+.nav-bar {
+    display: flex;
+    align-items: center;
+
+    /* Contiene el ul */
+    &__nav-list {
+        display: flex;
+        list-style-type: none;
+    }
+
+    /* Hover para la línea de abajo */
+    &__nav-list li:hover {
+        border-bottom: 5px solid $highlight-color;
+        transition: all ease 0.3s;
+    }
+    /* Esto es el li */
+    &__nav-item {
+        text-align: center;
+        border: 5px solid transparent;
+
+        &:hover {
+            border-bottom: 5px solid $highlight-color;
+            transition: all ease 0.3s;
+        }
+    }
+    /* Link de cada uno */
+    &__nav-link {
+        display: block;
+        background-color: $nav-bar-color;
+        color: $light-text-color;
+        padding: 0.7em 2em;
+        text-decoration: none;
+    }
+}
+
+/************************
+        SEARCH BAR
+***************************/
+
+.search-bar {
+    display: flex;
+    background-color: $nav-bar-color;
+    align-items: center;
+
+    /* Contenedor de la Barra de búsqueda */
+    &__form-container {
+        background-color: $nav-bar-color;
+        flex-basis: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        padding: 1em;
+    }
+    /* LOGO */
+    &__logo-container {
+        color: white;
+        display: flex;
+        background-image: url("../imagenes/3cea5f4612af4064a81e846a1df2afdb.png");
+        width: 270px;
+        padding: 1em;
+
+        &__image {
+            height: 35px;
+        }
+    }
+    /* El "Buscar" */
+    &__form-label {
+        background-color: $nav-bar-color;
+        margin-right: 0.5em;
+    }
+    /* El form para buscar -> Input */
+    &__form-search {
+        color: $light-text-color;
+        border-bottom: 1px solid $highlight-color;
+        border-top: transparent;
+        border-left: transparent;
+        border-right: transparent;
+        background-color: transparent;
+
+        &:focus {
+            outline: none;
+        }
+
+        &::placeholder {
+            font-family: "Montserrat", sans-serif;
+            color: $secondary-text-color;
+            font-size: 1.2em;
+        }
+    }
+    /* Botón de buscar con el Magnifying glass */
+    &__form-submit {
+        margin-left: 0.5em;
+
+        &:visited {
+            color: $background-color;
+        }
+    }
+
+    &__carrito-container {
+        flex-grow: 0 0 3em;
+        background-color: $nav-bar-color;
+        padding-right: 1.6em;
+    }
+}
+
+#search-bar__button {
+    display: none;
+}
+
+/* Icono para buscar directamente */
+.fa-search {
+    margin-left: 0.5em;
+    margin: auto;
+    color: $light-text-color;
+}
+
+/*********************************
+    TOGGLE DEL MENU -> Son los que están después del Carrito
+************************************/
+
+.menu-toggle {
+    display: none;
+    background-color: skyblue;
+    flex: 0 0 3em;
+    position: relative;
+    cursor: pointer;
+
+    &__label {
+        display: block;
+    }
+
+    &__top-bread,
+    &__meat,
+    &__bottom-bread {
+        display: block;
+        background-color: $light-text-color;
+        height: 0.2em;
+        position: absolute;
+        left: 0.5em;
+        right: 0.5em;
+    }
+    &__top-bread {
+        top: 0.8em;
+    }
+    &__meat {
+        top: 50%;
+        margin-top: -0.1em;
+    }
+
+    &__bottom-bread {
+        bottom: 0.8em;
+    }
+}
+
+/********************************
+Es para los cambios según RESOLUCIÓN.
+*********************************/
+@media (max-width: 1066px) {
+    .search-bar__logo-container {
+        width: 40px;
+    }
+    .search-bar__form-container {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column-reverse;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-bar {
+        display: none;
+    }
+
+    .nav-bar__nav-list {
+        flex-direction: column;
+    }
+    .search-bar__logo-container {
+        width: 40px;
+        margin-left: 1em;
+    }
+    .search-bar__form-container {
+        display: block;
+    }
+}
+
+@media (max-width: 400px) {
+    .search-bar__form-search {
+        max-width: 70px;
+        display: block;
+    }
+}

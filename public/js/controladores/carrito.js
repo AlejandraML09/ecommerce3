@@ -43,15 +43,16 @@ class CarritoController {
         var elemSectionCarrito = document.querySelector(".section-carrito");
         elemSectionCarrito.innerHTML = "<h2>Enviando Carrito...<h2>";
         // Envio al carrito al backend
-        await carritoService.guardarCarrito(carritoModel.obtener());
+        let preference = await carritoService.guardarCarrito(carritoModel.obtener());
         elemSectionCarrito.innerHTML = "<h2>Carrito Enviado!<h2>";
         //Borrando el carrito del modelo y del local storage porque ya se envió
         carritoModel.inicializar([]);
         localStorage.setItem("carrito", carritoModel.obtener());
         // ------ cierro la ventana del menú del carrito un tiempo después ------
-        setTimeout(() => {
+        setTimeout(async () => {
             elemSectionCarrito.classList.remove("section-carrito--visible");
             mostrarCarrito = false;
+            await renderPago(preference)
         // Acá utilizamos la función después del timeout para que la notificación se actualicé una vez que el carrito se manda al "backend"
             this.updateBadge();
         }, 1500);

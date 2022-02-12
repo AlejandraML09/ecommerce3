@@ -43,9 +43,17 @@ const guardarProducto = async producto => {
 }
 
 const actualizarProducto = async (id, producto) => {
-    let productoActualizado = await model.updateProducto(id, producto)
-    return productoActualizado
+    const errorvalidation = ProductoValidation.validar(producto)
+    if (!errorvalidation) {
+        let productoActualizado = await model.updateProducto(id, producto)
+        return productoActualizado
+    }
+    else {
+        console.log(`Error en actualizarProducto`, errorvalidation.details[0].message)
+        return {}
+    }
 }
+
 
 const borrarProducto = async id => {
     let productoBorrado = await model.deleteProducto(id)

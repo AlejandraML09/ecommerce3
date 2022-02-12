@@ -6,13 +6,13 @@ import Joi from 'joi'
 class ProductoValidation {
     static validar(producto) {
         const productoSchema = Joi.object({
-            nombre: Joi.string().min(3).max(20).required(),
+            nombre: Joi.string().min(3).max(35).required(),
             precio: Joi.number().required(),
             stock: Joi.number().required(),
             marca: Joi.string().required(),
             categoria: Joi.string().required(),
-            detalles: Joi.string().required(),
             foto: Joi.string().empty(''),
+            detalles: Joi.string().required(),
             envio: Joi.boolean().required()
         })
 

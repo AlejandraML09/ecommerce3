@@ -10,6 +10,7 @@ import ProductosModel from "../model/productos.js"
 // Acá importamos el config dónde va a estar la persistencia que nosotros elegimos.
 import config from "../config.js"
 
+import ProductoValidation from "./validaciones/productos.js"
 
 // const model = new ProductosModelMem()
 // const model = new ProductosModelFile()
@@ -28,9 +29,17 @@ const obtenerProducto = async id => {
     return producto
 }
 
+
 const guardarProducto = async producto => {
-    let productoGuardado = await model.createProducto(producto)
-    return productoGuardado
+    const errorvalidation = ProductoValidation.validar(producto)
+    if (!errorvalidation) {
+        let productoGuardado = await model.createProducto(producto)
+        return productoGuardado
+    }
+    else {
+        console.log(`Error en guardarProducto`, errorvalidation.details[0].message)
+        return {}
+    }
 }
 
 const actualizarProducto = async (id, producto) => {

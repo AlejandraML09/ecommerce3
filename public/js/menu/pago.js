@@ -3,16 +3,10 @@ const mercadopago = new MercadoPago("APP_USR-079e8a64-0919-4043-94a2-36461958205
     locale: "es-AR",
 });
 
-console.log(`
-*********************************************
-  Configuración del SDK de Mercado Pago OK!
-*********************************************  
-`)
+console.log(`Configuración del SDK de Mercado Pago Correcta!`)
 
 async function renderPago(preference) {
-
     let html = await fetch('plantillas/pago.html').then(r => r.text())
-
     document.querySelector('main').style.display = 'none'
     document.querySelector('.section-pago').innerHTML = html
 

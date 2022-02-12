@@ -55,7 +55,7 @@ class CarritoController {
             await renderPago(preference)
         // Acá utilizamos la función después del timeout para que la notificación se actualicé una vez que el carrito se manda al "backend"
             this.updateBadge();
-        }, 1500);
+        },0);
     }
 
     updateBadge() {

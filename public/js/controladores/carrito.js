@@ -9,7 +9,7 @@ class CarritoController {
             localStorage.setItem("carrito", carritoModel.obtener());
         }
     }
-    agregarAlCarrito(producto) {
+    async agregarAlCarrito(producto) {
         if (!carritoModel.productoExiste(producto)) {
             producto.cantidad = 1;
             // Guardar es el método que se encuentra en el modelo carrito.js
@@ -23,6 +23,7 @@ class CarritoController {
         
         //  Esta es una función que agregué para que cada vez que se agregan productos en el carrito; se actualicé en el badge de notificaciones roja arriba.
         this.updateBadge();
+        await renderCarrito(carritoModel.obtener());
         // Cada vez que agreguemos un producto lo vamos a persistir ahí.
         localStorage.setItem("carrito", JSON.stringify(carritoModel.obtener()));
 
@@ -55,6 +56,8 @@ class CarritoController {
             await renderPago(preference)
         // Acá utilizamos la función después del timeout para que la notificación se actualicé una vez que el carrito se manda al "backend"
             this.updateBadge();
+            await renderCarrito(carritoModel.obtener());
+            closeNav()
         },0);
     }
 

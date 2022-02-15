@@ -1,6 +1,6 @@
 {{#if productos.length}}
     {{#each productos}}
-        <div class="card" id="card-'{{id}}'">
+        <div class="card" id="card-{{id}}">
             <article class="card__article">
                 <div class="card__flip">
                     <div class="card__content">
@@ -13,7 +13,7 @@
                             </h2>
                             <button
                                 id="arrow-button-right"
-                                onclick="toggleCard('{{id}}'')"
+                                onclick="toggleCard('{{id}}')"
                             ><i class="fas fa-angle-double-right"></i></button>
                             <button
                                 class="cart-button"

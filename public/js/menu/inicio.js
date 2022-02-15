@@ -60,6 +60,26 @@ function agregarAlCarrito(id) {
     let producto = productosModel.obtener(id)
     // Este controlador agrega el carrito al modelo
     carritoController.agregarAlCarrito(producto)
+    let card = document.getElementById("card-" + id)
+    shakeCard(card)
+}
+
+
+// Está función es para que se mueva la card cuando agregamos un item al carrito.
+function shakeCard(card) {
+    card.classList.toggle("card-shake")
+    setTimeout(
+        function () {
+            card.classList.toggle("card-shake")
+        }, 1000)
+    let cartButton = card.getElementsByClassName("cart-button")[0];
+    let previousHTML = cartButton.innerHTML 
+    cartButton.innerHTML = "<h3>Agregado al Carrito!</h3>"
+    setTimeout(
+        function () {
+            cartButton.innerHTML = previousHTML
+        }, 1000)
+    
 }
 
 // Modificación 18/01/2022

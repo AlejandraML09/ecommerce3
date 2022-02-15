@@ -26,6 +26,7 @@ function getNombreArchivo(id) {
 */
 
 function initJS(id) {
+    hideMercadoPago()
     switch (id) {
         /* inicializo el código de la plantilla de inicio */
         case 'inicio':
@@ -74,6 +75,7 @@ function cargarPlantilla(id) {
 /* ----------------------------------------------------------------------------- */
 
 function iniPlantillas() {
+    
     let links = document.querySelectorAll('a')
     //console.log(links)
 

@@ -33,8 +33,7 @@ async function renderPago(preference) {
 
     // Go back
     document.getElementById("go-back").addEventListener("click", function () {
-        document.querySelector('.section-pago').innerHTML = ''
-        document.querySelector('main').style.display = 'block'
+        hideMercadoPago();
     });
 }
 
@@ -50,4 +49,9 @@ function createCheckoutButton(preferenceId) {
             label: 'Pagar', // Change the payment button text (optional)
         }
     });
+}
+
+function hideMercadoPago() {
+    document.querySelector('.section-pago').innerHTML = ''
+    document.querySelector('main').style.display = 'block'
 }

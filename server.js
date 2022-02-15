@@ -4,6 +4,10 @@ import routerCarrito from './router/carrito.js'
 import routerUpload from './router/upload.js'
 import DB_Mongo from './model/DB_Mongo.js'
 import config from './config.js'
+// Para que no se duerma Glitch
+import http from "http"
+
+
 
 if (config.TIPO_DE_PERSISTENCIA == 'MONGODB') {
     /* ------- Conexión hacia mongoDB ----------- */
@@ -33,3 +37,8 @@ console.log(config)
 const PORT = config.PORT
 const server = app.listen(PORT, () => console.log(`Servidor express escuchando en el puerto ${PORT}`))
 server.on('error', error => console.log(`Error en servidor express: ${error.message}`))
+
+/* ------------ Para que NO se duerma Glitch  --------------- */
+setInterval(() => {
+    http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
+}, 280000);

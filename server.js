@@ -38,7 +38,3 @@ const PORT = config.PORT
 const server = app.listen(PORT, () => console.log(`Servidor express escuchando en el puerto ${PORT}`))
 server.on('error', error => console.log(`Error en servidor express: ${error.message}`))
 
-/* ------------ Para que NO se duerma Glitch  --------------- */
-setInterval(() => {
-    http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
-}, 280000);

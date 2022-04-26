@@ -296,6 +296,7 @@ Es para los cambios según RESOLUCIÓN.
 }
 .card__heading h2 {
   padding: 0.5em;
+  max-height: 30px;
 }
 .card__description {
   padding: 1em;
@@ -348,15 +349,12 @@ Es para los cambios según RESOLUCIÓN.
   color: #fefefe;
 }
 
-.fa-angle-double-right {
-  font-size: 3em;
-  display: flex;
-  align-self: flex-end;
-  justify-items: center;
+.fa-share {
+  font-size: 2.5em;
   color: #007dfc;
   margin-right: 3px;
 }
-.fa-angle-double-right:hover {
+.fa-share:hover {
   transition: all 0.2s ease-in-out;
   transform: scale(1.3);
   color: #98bee4;
@@ -373,7 +371,7 @@ Es para los cambios según RESOLUCIÓN.
 
 #arrow-button-left {
   display: flex;
-  align-self: center;
+  align-self: flex-start;
   justify-items: center;
   outline: none;
   background: transparent;

@@ -866,6 +866,10 @@ footer a {
   padding-top: 10em;
 }
 
+#bottomblob {
+  margin: -4px;
+}
+
 #topblob {
   position: absolute;
   top: 50px;
@@ -883,7 +887,6 @@ footer a {
   /* Un ID separado para dejar 2 inputs en la misma línea siendo uno más chico que el otro */
   /* Location, Phone, Email Section */
   /* Social Media Icons */
-  /* Begin Media Queries*/
 }
 .contact-header {
   text-align: center;
@@ -898,8 +901,8 @@ footer a {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 20px;
   position: relative;
+  margin-bottom: 3em;
 }
 .contact .contact-form {
   display: flex;
@@ -907,15 +910,21 @@ footer a {
   align-items: flex-end;
   flex: 1;
 }
-.contact .contact-form-horizontal {
-  /*float: left;*/
-  font-weight: 400;
-}
 .contact .contact-form__container {
   padding: 0.5em;
   display: flex;
   flex-direction: column;
   width: 100%;
+}
+.contact .contact-form__container h2 {
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  font-size: 2em;
+  font-family: inherit;
+  margin-top: 0;
+  margin-bottom: 1em;
 }
 .contact .contact-form__container input,
 .contact .contact-form__container textarea,
@@ -1020,10 +1029,18 @@ footer a {
   font-size: 1em;
   text-decoration: none;
   transition-duration: 0.2s;
+  inline-size: 500px;
+  word-break: break-all;
 }
 .contact .contact-text a:hover {
   color: #fefefe;
   text-decoration: none;
+}
+.contact .social-media-header {
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-family: inherit;
 }
 .contact .social-media-list {
   position: relative;
@@ -1075,54 +1092,6 @@ footer a {
 }
 .contact hr {
   border-color: #fefefe;
-}
-@media screen and (max-width: 850px) {
-  .contact .contact__content {
-    display: flex;
-    flex-direction: column;
-  }
-  .contact .contact-form-horizontal {
-    margin: 0 auto;
-  }
-  .contact .social-media-list li {
-    height: 60px;
-    width: 60px;
-    line-height: 60px;
-  }
-  .contact .social-media-list li:after {
-    width: 60px;
-    height: 60px;
-    line-height: 60px;
-  }
-}
-@media screen and (max-width: 569px) {
-  .contact .contact__content {
-    float: none;
-    margin: 0 auto;
-  }
-  .contact .name,
-.contact .email {
-    width: 280px;
-  }
-  .contact .social-media-list {
-    left: 0;
-  }
-  .contact .social-media-list li {
-    height: 55px;
-    width: 55px;
-    line-height: 55px;
-    font-size: 2rem;
-  }
-  .contact .social-media-list li:after {
-    width: 55px;
-    height: 55px;
-    line-height: 55px;
-  }
-}
-@media screen and (max-width: 410px) {
-  .contact .send-button {
-    width: 99%;
-  }
 }
 
 .about-us-hero {

@@ -17,17 +17,27 @@
         ></script>
     </head>
     <body>
-        <main>
-            <div class="contact contact-page-content">
+        <svg
+            id="topblob"
+            xmlns="http://www.w3.org/2000/svg"
+            viewbox="0 0 1400 320"
+            preserveaspectratio="none"
+        >
+            <path
+                fill="#007dfc"
+                fill-opacity="1"
+                d="M0,0L48,42.7C96,85,192,171,288,186.7C384,203,480,149,576,128C672,107,768,117,864,112C960,107,1056,85,1152,112C1248,139,1344,213,1392,250.7L1440,288L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
+                
+            ></path>
+        </svg>
+        <main class="contact-page-content">
+            <div class="contact-header"><p>Contacto</p></div>
+            <div class="contact">
                 <div class="contact__content">
-                    <h1 class="contact__title">
-                        Conocé más sobre nuestros productos:
-                    </h1>
-                    <p class="contact__product-text">
-                        Completá el formulario y recibirás inmediatamente los
-                        mejores descuentos para tu headset, teclado o microfono!
-                    </p>
-                    <form class="contact-form" action="#">
+                    <form
+                        class="contact-form contact-form-horizontal"
+                        action="#"
+                    >
                         <div class="contact-form__container">
                             <select name="product" id="product" required>
                                 <option value="">Elegí tu Producto</option>
@@ -105,37 +115,93 @@
                                 placeholder="Comentarios"
                             ></textarea>
                         </div>
-                        <div class="contact-form__container">
-                            <button type="submit" value="submit">Enviar</button>
-                        </div>
+
+                        <button
+                            class="contact-form__container send__button"
+                            id="submit"
+                            type="submit"
+                            value="SEND"
+                        >
+                            <div class="send__button-alt">
+                                <i class="fa fa-paper-plane"></i
+                                ><span class="send__button-text">Enviar</span>
+                            </div>
+                        </button>
                     </form>
                 </div>
 
-                <div class="contact__social-media">
-                    <h1 class="contact__icons-title">
-                        También podes contactarnos a través de nuestras Redes
-                        Sociales:
-                    </h1>
-                    <div class="contact__icons-group">
-                        <div class="contact__icon">
-                            <i class="fab fa-whatsapp"></i>
-                            <p>(+54)1589-6342</p>
-                        </div>
-                        <div class="contact__icon">
-                            <i class="fab fa-twitter"></i>
-                            <p>@connectic_us</p>
-                        </div>
-                        <div class="contact__icon">
-                            <i class="fab fa-facebook"></i>
-                            <p>/connectic_us</p>
-                        </div>
-                        <div class="contact__icon">
-                            <i class="fab fa-instagram"></i>
-                            <p>@connectic_us</p>
-                        </div>
-                    </div>
+                <div class="direct-contact-container">
+                    <ul class="contact-list">
+                        <li class="list-item">
+                            <i class="fa fa-map-marker fa-2x"></i>
+                            <span class="contact-text place"
+                                >Buenos Aires, Argentina</span
+                            >
+                        </li>
+
+                        <li class="list-item">
+                            <i class="fa fa-phone fa-2x"></i>
+                            <span class="contact-text phone"
+                                ><a
+                                    href="tel:1-212-555-5555"
+                                    title="Give me a call"
+                                    >(11) 6355-2368</a
+                                ></span
+                            >
+                        </li>
+
+                        <li class="list-item">
+                            <i class="fa fa-envelope fa-2x"></i>
+                            <span class="contact-text gmail"
+                                ><a href="mailto:#" title="Send me an email"
+                                    >connecticusoficial@gmail.com</a
+                                ></span
+                            >
+                        </li>
+                    </ul>
+
+                    <hr />
+                    <ul class="social-media-list">
+                        <li>
+                            <a href="#" target="_blank" class="contact-icon">
+                                <i class="fa fa-github" aria-hidden="true"></i
+                            ></a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" class="contact-icon">
+                                <i
+                                    class="fa fa-brands fa-whatsapp"
+                                    aria-hidden="true"
+                                ></i
+                            ></a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" class="contact-icon">
+                                <i class="fa fa-twitter" aria-hidden="true"></i
+                            ></a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" class="contact-icon">
+                                <i
+                                    class="fa fa-instagram"
+                                    aria-hidden="true"
+                                ></i
+                            ></a>
+                        </li>
+                    </ul>
+                    <hr />
                 </div>
             </div>
+            <svg  xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1440 320"
+             preserveaspectratio="none"
+            >
+                <path
+                    fill="#007dfc"
+                    fill-opacity="1"
+                    d="M0,96L48,112C96,128,192,160,288,181.3C384,203,480,213,576,224C672,235,768,245,864,213.3C960,181,1056,107,1152,117.3C1248,128,1344,224,1392,272L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+                     id="bottomblob"
+                ></path>
+            </svg>
         </main>
     </body>
 </html>

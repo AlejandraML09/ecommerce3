@@ -138,6 +138,7 @@
             transition: all 0.2s ease-in-out;
             &:hover {
                 transform: translate3d(0px, -29px, 0px);
+                cursor:pointer;
             }
         }
         &-text {
@@ -195,6 +196,7 @@
     .contact-text a:hover {
         color: $light-text-color;
         text-decoration: none;
+        cursor:pointer;
     }
 
     .social-media-header {
@@ -248,16 +250,19 @@
 
     .social-media-list li:hover {
         background-color: #007dfc;
+        cursor:pointer;
     }
 
     .social-media-list li:hover:after {
         opacity: 1;
         transform: scale(1.12);
         transition-timing-function: cubic-bezier(0.37, 0.74, 0.15, 1.65);
+        cursor:pointer;
     }
 
     .social-media-list li:hover a {
         color: $background-color;
+        cursor:pointer;
     }
     hr {
         border-color: $light-text-color;

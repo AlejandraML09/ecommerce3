@@ -46,6 +46,7 @@ footer {
             margin-left: 1em;
             &:hover {
                 color: $light-text-color;
+                cursor:pointer;
             }
         }
     }

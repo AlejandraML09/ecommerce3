@@ -103,6 +103,7 @@
         margin: 0.5em;
         &:hover {
             background-color: $highlight-color-hover;
+            cursor:pointer;
         }
         &:disabled {
             background-color: $secondary-text-color;
@@ -191,6 +192,7 @@
             transition: all 0.2s ease-in-out;
             transform: scale(1.1);
             color: $highlight-color-hover;
+            cursor:pointer;
         }
     }
 
@@ -233,6 +235,7 @@
             transition: all 0.2s ease-in-out;
             transform: scale(1.3);
             color: $highlight-color-hover;
+            cursor:pointer;
         }
     }
     .fa-trash {
@@ -242,6 +245,7 @@
             transition: all 0.2s ease-in-out;
             transform: scale(1.3);
             color: $highlight-color-hover;
+            cursor:pointer;
         }
     }
     .fa-truck {
